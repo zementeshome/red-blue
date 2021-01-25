@@ -2,6 +2,7 @@ import React, {useState, useEffect } from 'react';
 import { useHistory } from "react-router-dom";
 import fire from '../../fire';
 import Cookies from 'js-cookie';
+import './Login.scss';
 
 function Login() {
 
@@ -114,12 +115,15 @@ function Login() {
     return (
         <section className="login">
             <div className="login__container">
+            <h1 className="login__header">earth or mars</h1>
             {!hasAccount ? (
                 <form className="login__sign-in">
                     <label className="login__label">username</label>
-                    <input className="login_input" type="text" autoFocus required value={email} onChange={(e) => setEmail(e.target.value)}></input>
+                    <input className="login__input" type="text" autoFocus required value={email} onChange={(e) => setEmail(e.target.value)}></input>
+                    <p className="login__email-error">{emailError}</p>
                     <label className="login__label">password</label>
                     <input className="login__input" type="password" required value={password}onChange={(e) => setPassword(e.target.value)}></input>
+                    <p className="login__password-error">{passwordError}</p>
                     <div className="login__button-div">
                 <button className="login__button" onClick={handleLogin}>sign in</button>
                 </div>
@@ -132,7 +136,7 @@ function Login() {
                 <label className="login__label">username(email)</label>
                 <input className="login__input" type="text" autoFocus required value={email} onChange={(e) => setEmail(e.target.value)} ></input>
                 <p className="login__email-error">{emailError}</p>
-                <label className="login__label">password</label>
+                <label className="login__label-2">password</label>
                 <input className="login__input" type="password" required value={password} onChange={(e) => setPassword(e.target.value)}></input>
                 <p className="login__password-error">{passwordError}</p>
                 <div className="login__button-div">
