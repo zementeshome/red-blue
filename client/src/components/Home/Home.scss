@@ -1,0 +1,21 @@
+@import '../../styles/partials/variables';
+
+@import '../../styles/partials/fonts';
+
+.home {
+
+    &__circle-container {
+        display: flex;
+        align-items: center;
+        margin-top: 5rem;
+    }
+
+    &__circle {
+        height: 100px;
+        width: 100px;
+        border-radius: 50%;
+        background-color: #bbb;
+        // margin-top: 5rem;
+        margin: auto;
+    }
+}
