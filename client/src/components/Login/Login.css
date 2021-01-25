@@ -36,8 +36,10 @@ html, body {
   overflow-x: hidden;
   font-family: "Aileron Regular";
   font-size: 14px;
-  background: #334fdb;
-  background: radial-gradient(circle, #334fdb 7%, #fc4646 100%);
+  background-image: url("../../assets/images/night-sky.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: white;
 }
 
 @media only screen and (min-width: 320px) {
@@ -195,9 +197,9 @@ html, body {
     width: 53%;
     margin-top: 1rem;
     height: 30px;
-    border: 1px solid black;
-    background-color: black;
-    color: white;
+    border: 1px solid white;
+    background-color: white;
+    color: black;
     border-radius: 5px;
     font-size: 14px;
     cursor: pointer;
