@@ -1,33 +1,38 @@
 @font-face {
-  font-family: "Aileron Regular";
+  font-family: 'Aileron Regular';
   font-style: normal;
   font-weight: normal;
   src: url("./../fonts/Aileron-Regular.woff") format("woff");
 }
+
 @font-face {
-  font-family: "Aileron Thin";
+  font-family: 'Aileron Thin';
   font-style: normal;
   font-weight: normal;
   src: url("./../fonts/Aileron-Thin.woff") format("woff");
 }
+
 @font-face {
-  font-family: "Aileron Bold";
+  font-family: 'Aileron Bold';
   font-style: normal;
   font-weight: normal;
   src: url("./../fonts/Aileron-Bold.woff") format("woff");
 }
+
 @font-face {
-  font-family: "Aileron Black";
+  font-family: 'Aileron Black';
   font-style: normal;
   font-weight: normal;
   src: url("./../fonts/Aileron-Black.woff") format("woff");
 }
+
 @font-face {
-  font-family: "Aileron UltraLight";
+  font-family: 'Aileron UltraLight';
   font-style: normal;
   font-weight: normal;
   src: url("./../fonts/Aileron-UltraLight.woff") format("woff");
 }
+
 .home__circle-container {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -37,6 +42,7 @@
           align-items: center;
   margin-top: 5rem;
 }
+
 .home__circle {
   height: 100px;
   width: 100px;
