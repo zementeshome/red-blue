@@ -33,13 +33,17 @@
   src: url("./../fonts/Aileron-UltraLight.woff") format("woff");
 }
 
+.home {
+  text-align: center;
+}
+
 .home__circle-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   margin-top: 5rem;
 }
 
@@ -49,5 +53,23 @@
   border-radius: 50%;
   background-color: #bbb;
   margin: auto;
+}
+
+@media only screen and (min-width: 320px) {
+  .home__image {
+    width: 50%;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .home__image {
+    width: 30%;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .home__image {
+    width: 20%;
+  }
 }
 /*# sourceMappingURL=Home.css.map */

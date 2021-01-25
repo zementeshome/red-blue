@@ -3,10 +3,11 @@
 @import '../../styles/partials/fonts';
 
 .home {
+    text-align: center;
 
     &__circle-container {
         display: flex;
-        align-items: center;
+        justify-content: center;
         margin-top: 5rem;
     }
 
@@ -17,5 +18,17 @@
         background-color: #bbb;
         // margin-top: 5rem;
         margin: auto;
+    }
+
+    &__image {
+        @include mobile {
+            width: 50%;
+        }
+        @include tablet {
+            width: 30%;
+        }
+        @include desktop {
+            width: 20%;
+        }
     }
 }

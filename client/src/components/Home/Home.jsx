@@ -14,35 +14,42 @@ const handleLogout = () => {
     })
 }
 
-// const randomColor = () => {
-//     return Math.random() > 0.5 ? "red" : "blue"
-// }
+const earthOrMars = new Array('../../assets/images/earth.png', '../../assets/images/Planet_Mars.png')
 
-// let color = Math.random() > 0.5 ? {earth} : {mars}
 
-// const setCookies = () => {
-//     Cookies.set('color')
-// }
-
-// const getCookies = () => {
-//     Cookies.get('color')
-// }
-
-let image = earth
-    if (Math.random() <0.5) {
-    image = mars
-    console.log(image)
+function displayImage() {
+    // return Math.random() > 0.5 ? earth : mars
+    return Math.floor(Math.random() * earthOrMars.length / 2)
 }
 
+function getCookie(key) {
+    const pattern = new RegExp("(?:(?:^|.*;\\s*)" + key + "\\s*\\=\\s*([^;]*).*$)|^.*$")
+    return document.cookie.replace(pattern, "$1");
+  }
 
-// getCookie = () => {
-//     Cookies.get('color');
-// }
 
-// setCookie = () => {
-//     Cookies.set('color');
-// }
+function updateImageCookies() {
+    let image = getCookie('earth_or_mars');
+    let timesViewed;
 
+    if (image === "") {
+    image = displayImage()
+    document.cookie = "earth_or_mars=" + image;
+    timesViewed = 1;
+    document.cookie = "image_views=" + timesViewed
+    } else {
+    const views = getCookie("image_views");
+    timesViewed = parseInt(views, 10) + 1;
+    document.cookie = "image_views=" + timesViewed;
+    }
+
+    return {image, timesViewed}
+}
+
+    const {image, timesViewed} = updateImageCookies()
+
+    // document.getElementsByClassName('home__image').src = image;
+    // document.getElementsByClassName('home__number').innerHTML = timesViewed
 
 
     return (
@@ -50,10 +57,9 @@ let image = earth
             <h1>Home</h1>
             <button className="home__logout" onClick={handleLogout}>logout</button>
             <div className="home__circle-container">
-            <img src={image} alt=""/> 
-            {/* <p className="home__circle-colour">image shown: {image}</p> */}
-            {/* <div className="home__circle"></div>
-            <p className="home__circle-number"></p> */}
+        <img src={image} alt=""/>
+            {/* <div className="home__circle" style={{backgroundColor: image}}></div> */}
+            <p className="home__number">number of times you've visited: {timesViewed}</p>
             </div>
         </section>
     )
