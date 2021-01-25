@@ -14,7 +14,8 @@ var firebaseConfig = {
   firebase.analytics();
   export const db = fire.firestore();
   export const auth = firebase.auth();
+  firebase.auth().setPersistence(firebase.auth.Auth.Persistence.NONE)
 
-  firebase.auth().setPersistance(firebase.auth.Auth.Persistance.NONE)
+  console.log(firebase.auth.Auth.Persistence.NONE);
 
   export default fire;
