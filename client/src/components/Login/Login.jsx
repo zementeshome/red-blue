@@ -48,22 +48,9 @@ function Login() {
             fire
             .auth()
             .createUserWithEmailAndPassword(email,password)
-            .then(({ user }) => {
-                return user.getIdToken().then((idToken) => {
-                    return fetch('/sessionLogin', {
-                        method: 'POST',
-                        headers: {
-                            Accept: "application/json",
-                            "Content-Type": "application/json",
-                            "CSRF-Token": Cookies.get("XSRF-TOKEN"),
-                        },
-                        body: JSON.stringify({ idToken })
-                    })
-                })
-            })
-        .then(() => {
-            history.push('/home');
-          })
+            .then((userInfo) => {
+            fire.auth().currentUser.updateProfile({displayName: `${email}`})
+            }).then(() => {history.push('/home');})
           .catch((err) => {
             switch (err.code) {
               case "auth/email-already-in-use":
@@ -83,20 +70,7 @@ function Login() {
             fire
             .auth()
             .signInWithEmailAndPassword(email,password)
-            .then(({ user }) => {
-                return user.getIdToken().then((idToken) => {
-                    return fetch('/sessionLogin', {
-                        method: 'POST',
-                        headers: {
-                            Accept: "application/json",
-                            "Content-Type": "application/json",
-                            "CSRF-Token": Cookies.get("XSRF-TOKEN"),
-                        },
-                        body: JSON.stringify({ idToken })
-                    })
-                })
-            })
-        .then(() => {
+            .then(() => {
             history.push('/home');
           })
           .catch((err) => {

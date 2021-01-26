@@ -92,6 +92,7 @@ if(user){
       <button className="home__logout" onClick={handleLogout}>
         logout
       </button>
+      <p>hey {fire.auth().currentUser?.email}</p>
       <div className="home__circle-container">
         <img className="home__image" src={image} alt="" />
         {/* <div className="home__circle" style={{backgroundColor: image}}></div> */}
