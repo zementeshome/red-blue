@@ -33,13 +33,14 @@
   src: url("./../fonts/Aileron-UltraLight.woff") format("woff");
 }
 
-html, body {
+html,
+body {
   width: 100%;
   height: 100%;
   margin: 0px;
   padding: 0px;
   overflow-x: hidden;
-  font-family: 'Aileron Regular';
+  font-family: "Aileron Regular";
   font-size: 14px;
   background-image: url("../../assets/images/night-sky.svg");
   background-repeat: no-repeat;
@@ -49,7 +50,7 @@ html, body {
 
 @media only screen and (min-width: 320px) {
   .login__header {
-    font-family: 'Aileron Bold';
+    font-family: "Aileron Bold";
     font-size: 30px;
   }
 }
@@ -100,13 +101,13 @@ html, body {
     -webkit-box-pack: space-evenly;
         -ms-flex-pack: space-evenly;
             justify-content: space-evenly;
-    margin-left: -20rem;
+    margin-left: -16.9rem;
     margin-top: 8px;
   }
 }
 
 @media only screen and (min-width: 320px) {
-  .login__label-2 {
+  .login__label-2, .login__label-1 {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -118,11 +119,11 @@ html, body {
 }
 
 @media only screen and (min-width: 768px) {
-  .login__label-2 {
+  .login__label-2, .login__label-1 {
     -webkit-box-pack: space-evenly;
         -ms-flex-pack: space-evenly;
             justify-content: space-evenly;
-    margin-left: -16.5rem;
+    margin-left: -20rem;
     margin-top: 10px;
   }
 }
@@ -183,7 +184,7 @@ html, body {
 @media only screen and (min-width: 320px) {
   .login span {
     font-weight: bold;
-    font-family: 'Aileron Regular';
+    font-family: "Aileron Regular";
     letter-spacing: 0.5px;
     margin-left: 5px;
     cursor: pointer;
