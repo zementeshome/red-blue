@@ -17,7 +17,7 @@ function Home() {
         history.push("/");
       });
   };
-
+  
   function displayImage() {
     return Math.random() > 0.5 ? mars : earth;
   }
