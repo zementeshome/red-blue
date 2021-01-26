@@ -75,7 +75,7 @@ function Home() {
         <img className="home__image" src={image} alt="earth or mars"/>
       </div>
       <p className="home__number">
-          number of times you've visited: {timesVisited}
+          number of times you've visited this planet: {timesVisited}
         </p>
     </section>
   );

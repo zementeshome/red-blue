@@ -12,6 +12,9 @@
       font-size: 20px;
       text-shadow: 0 0 3px #ff0000;
     }
+    @include desktop {
+      font-size: 25px;
+    }
   }
 
   &__logout {
@@ -60,6 +63,9 @@
       font-size: 15px;
       font-weight: bold;
       text-shadow: 2px 2px 8px #ff0000;
+    }
+    @include desktop {
+      font-size: 20px;
     }
   }
 }
