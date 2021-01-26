@@ -2,7 +2,7 @@
 
 ## About
 
-1. After logging in the user is shown earth or mars. This is random and there is a 50/50 chance of the user being shown either planet. Every time the user logins in they will be shown the same planet.
+1. After logging in the user is shown earth or mars. This is random and there is a 50/50 chance of the user being shown either planet. Every time the user logs in in they will be shown the same planet.
 
 2. In order to see a record of how many times a user has seen either planet please do the following:
 
