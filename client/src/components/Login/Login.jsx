@@ -1,7 +1,6 @@
 import React, {useState, useEffect } from 'react';
 import { useHistory } from "react-router-dom";
 import fire from '../../fire';
-import Cookies from 'js-cookie';
 import './Login.scss';
 
 function Login() {

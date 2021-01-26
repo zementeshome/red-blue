@@ -161,7 +161,7 @@ html, body {
   .login__email-error, .login__password-error {
     color: red;
     font-size: 12px;
-    margin-top: -0.5rem;
+    margin-top: 1rem;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -176,7 +176,7 @@ html, body {
     -webkit-box-pack: space-evenly;
         -ms-flex-pack: space-evenly;
             justify-content: space-evenly;
-    margin-top: -0.3rem;
+    margin-top: 1rem;
   }
 }
 

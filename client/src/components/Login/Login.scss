@@ -100,13 +100,13 @@ html, body {
         @include mobile {
         color: red;
         font-size: 12px;
-        margin-top: -0.5rem;
+        margin-top: 1rem;
         display: flex;
         justify-content: flex-start;
         }
         @include tablet {
             justify-content: space-evenly;
-            margin-top: -0.3rem;
+            margin-top: 1rem;
         }
     }
 
